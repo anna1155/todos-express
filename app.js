@@ -4,9 +4,7 @@ const {readFile, writeFile} = require('./helper/file.helper');
 const filePath = './data/todos.json';
 
 const app = express();
-app.use(cors({
-    origin: 'http://localhost:3000'
-  }));
+app.use(cors());
   
 const port = 5000;
 

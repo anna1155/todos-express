@@ -1,12 +1,10 @@
 const express = require('express');
-const cors = require('cors');
 const {readFile, writeFile} = require('./helper/file.helper');
-const cors = require('cors');
 const filePath = './data/todos.json';
 
 const app = express();
 const port = 5000;
-app.use(cors());
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 

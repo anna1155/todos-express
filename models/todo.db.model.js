@@ -2,8 +2,8 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 class TodoDBModel {
-    static async getAll(){
-        return prisma.todo.findMany();
+    static async getAll(where = {}){
+        return prisma.todo.findMany({where});
     }
 
     static async findOne(id) {

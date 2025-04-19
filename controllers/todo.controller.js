@@ -1,5 +1,4 @@
 const TodoDBModel = require('../models/todo.db.model');
-let todos = new TodoModel();
 
 const getTodoById = async (req,res) => {
     const id = req.params.id;

@@ -1,9 +1,9 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 class TodoDBModel {
-    static async getAll(where = {}){
-        return prisma.todo.findMany({where});
+    static async getAll(){
+        return prisma.todo.findMany();
     }
 
     static async findOne(id) {
@@ -32,4 +32,4 @@ class TodoDBModel {
     }
 }
 
-module.exports = TodoDBModel ;
+export default TodoDBModel ;

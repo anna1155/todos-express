@@ -1,4 +1,4 @@
-const TodoDBModel = require('../models/todo.db.model');
+const TodoDBModel = require('../models/todo.db.model').default;
 
 const getTodoById = async (req,res) => {
     const id = req.params.id;
@@ -16,7 +16,7 @@ const getTodoById = async (req,res) => {
 
 const getTodos = async (req,res) => {
     return res.status(200).json({
-        message: '***Fetched all todos successfully***',
+        message: '***Fetched all todos successfully@@@',
         data: await TodoDBModel.getAll()
     });
 };

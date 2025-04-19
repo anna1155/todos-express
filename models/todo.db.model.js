@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 class TodoDBModel {
     static async getAll(){
-        return await prisma.todo.findMany();
+        return prisma.todo.findMany();
     }
 
     static async findOne(id) {
